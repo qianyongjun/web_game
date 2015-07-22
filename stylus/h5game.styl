@@ -1,0 +1,234 @@
+$bg-color=#f06060;
+$btn-normal-color=#fcad26;
+$btn-special-color=#5cbcf6;
+$font-default-color=#fff;
+$box-normal-color=#da9622;
+$box-special-color=#49a7df;
+$font-score-color=#ffa1a1;
+$time-bg-color=#fd9090;
+$time-font-color=#ffcaca;
+$dialog-bg-color=#a74343;
+$box-random_one-color=rgb(15, 43, 120);
+$box-random_two-special-color=rgb(139, 202, 255);
+$box-random_two-colo=rgb(109, 4, 62);
+$box-random_two-special-color=rgb(224, 119, 177);
+
+body
+	background-color $bg-color
+	color $font-default-color
+	font 12px/1.5 "微软雅黑"
+	margin 0
+	.game-wrap
+		.btn
+			display block
+			background-color $btn-normal-color
+			margin 10px 30px
+			width 220px
+			height 50px
+			line-height 50px
+			font-size 20px
+			font-weight 700
+			font-family "微软雅黑"
+			color $font-default-color
+			border-radius 7px
+			-webkit-border-radius 7px
+			-moz-border-radius 7px
+			box-shadow 0 5px $box-normal-color
+			-webkit-box-shadow 0 5px $box-normal-color
+			-moz-border-radius 0 5px $box-normal-color
+			border none
+			position relative
+			pointer cursor
+			letter-spacing 1px
+			outline 0
+		.hide
+			display none
+		.page
+			position absolute
+			top 0
+			left 0
+			bottom 0
+			right 0
+		#loading
+			text-align center
+			font-size 30px
+			.loading-txt
+				position absolute
+				top 0
+				left 0
+				right 0
+				bottom 60px
+				height 100px
+				width 100%
+				margin auto
+		#index
+			h1
+				padding 30px 0
+				font-size 30px
+				text-align center
+				text-shadow 1px 1px 1px #ab3c3c3
+			.intro
+				font-size 16px
+				text-align center
+				opacity 0.5
+			.btns
+				position absolute
+				bottom 10px
+				height 210px
+				text-align center
+				width 100%
+				color $font-default-color
+				.btn
+					margin 0 auto 18px
+				.btn-new
+					background-color $btn-special-color
+					box-shadow 0 5px $box-special-color
+					-webkit-box-shadow 0 5px $box-special-color
+					-moz-box-shadow 0 5px $box-special-color
+		#main
+			header
+				position absolute
+				top 0
+				left 0
+				width 100%
+				height 50px
+				line-height 50px
+				font-size 16px
+				text-align center
+				color $font-score-color
+				.score
+					position absolute
+					top 0
+					left 10px
+					em
+						font-style normal
+				.time
+					padding 0 10px
+					font-weight 500
+					font-size 20px
+					background-color $time-bg-color
+					color $time-font-color
+					border-radius 20px
+					-webkit-border-radius 20px
+					-moz-border-radius 20px
+				.danger
+					color #FF0505
+					background-color #fff
+				.btn-pause
+					position absolute
+					top 5px
+					right 10px
+					width auto
+					height 40px
+					line-height 40px
+					padding 0 10px
+					margin 0
+					font-weight bold
+			#box
+				position absolute
+				top 0
+				left 0
+				bottom 0
+				left 0
+				padding 10px
+				margin auto
+				border-radius 10px
+				-webkit-border-radius 10px
+				-moz-border-radius 10px
+				background-color #ddd
+				span
+					box-sizing border-box
+					-webkit-box-sizing border-box
+					border 5px solid #ddd
+					border-radius 10px
+					-webkit-border-radius 10px
+					-moz-border-radius 10px
+					display block
+					float left
+			.lv2
+				span
+					width 50%
+					height 50%
+			.lv3
+				span
+					width 33.33%
+					height 33.33%
+			.lv4
+				span
+					width 25%
+					height 25%
+			.lv5
+				span
+					width 20%
+					height 20%
+			.lv6
+				span
+					width 16.66%
+					height 16.66%
+			.lv7
+				span
+					width 14.28%
+					height 14.28%
+			.lv8
+				span
+					width 12.5%
+					height 12.5%
+			.lv9
+				span
+					width 11.11%
+					height 11.11%
+			.lv10
+				span
+					width 10%
+					height 10%
+		#dialog
+			background-color $dialog-bg-color
+			padding-top 50px
+			box-sizing border-box
+			-webkit-box-sizing border-box
+			.btn
+				margin 15px auto
+			.inner
+				height 617px
+				width 375px
+				text-align center
+				font-size 20px
+				.content
+					padding-top 30px
+					.inner-content
+						position absolute
+						top 0
+						left 0
+						right 0
+						bottom 0
+						height 270px
+						width 100%
+						margin auto
+						h3
+							color #321
+							font-size 40px
+							margin 0
+							line-height 60px
+						.btn-wrap
+							width 220px
+							margin 0 auto
+							.btn
+								width 105px
+								float left
+							.btn-restart
+								margin-left 10px
+						.btn-more
+							text-decoration none
+						.clearfix:after
+							clear both
+							content " "
+							height 0
+							display block
+			&:after
+				position absolute
+				top 0
+				right 0
+				display block
+				content " "
+				width 90px
+				height 75px

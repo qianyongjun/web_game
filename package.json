@@ -1,0 +1,20 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "project": "demo",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.5.8",
+    "gulp": "^3.9.0",
+    "run-sequence": "^1.0.1",
+    "gulp-notify":"^2.2.0",
+    "gulp-clean":"^0.3.1",
+    "run-sequence": "^1.0.1",
+    "gulp-cache": "^0.2.4",
+    "gulp-changed": "^1.0.0",
+    "gulp-stylus": "^1.3.3"
+  }
+}
