@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>touchslider</title>
+	<style>
+		.touchslider .touchslider-viewport {
+			border: 5px solid #fff1e0;
+			background: #fff1e0;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+		}
+		.touchslider .touchslider-item {
+			height: 345px;
+			overflow: hidden;
+		}
+		.touchslider .touchslider-nav {
+			text-align: center;
+			margin-top: 16px;
+		}
+		.touchslider .touchslider-nav a {
+			cursor: pointer;
+			color: #000;
+		}
+		.touchslider .touchslider-nav a:active {
+			background: #689db2;
+		}
+
+		.touchslider-nav {
+			font: bold 16px/16px Georgia;
+		}
+		.touchslider .touchslider-nav-item {
+			width: 16px;
+			height: 16px;
+			background: #ddd;
+			margin: 0 16px;
+			display: inline-block;
+			-webkit-border-radius: 12px;
+			border-radius: 12px;
+			text-indent:-9999px;
+			}
+		.touchslider .touchslider-nav-item-current {
+			background: #cff0ff;
+		}
+
+		/* social slider */
+		.section-download {
+			position: relative;
+			padding-right: 230px;
+		}
+		.social {
+			width: 200px;
+			position: absolute;
+			right: 20px;
+			top: 0;
+		}
+		.touchslider-social .touchslider-nav {
+			text-align: center;
+			margin-bottom: 6px;
+		}
+		.touchslider-social .touchslider-nav-item {
+			opacity: .5;
+			padding: 0 2px;
+		}
+		.touchslider-social .touchslider-nav-item-current {
+			opacity: 1;
+		}
+		.tab-page{
+			display:none;
+		}
+		.tab-nav span{
+			display:inline-block;
+			padding:10px 20px;
+			font-size:20px;
+			border:2px solid #dedede;
+			border-radius:10px;
+			-webkit-border-radius:10px;
+			cursor:pointer;
+		}
+		.tab-nav .active{
+			color:red;
+		}
+		.tab-content{
+			position:relative;
+		}
+		.tab-content .tab-page{
+			display:none;
+			width:500px;
+			height:345px;
+			box-sizing:content-box;
+			padding:20px;
+			text-align:center;
+			border:5px solid #fed2e3;
+			border-radius:10px;
+			-webkit-border-radius:10px;
+			box-shadow:5px 5px 10px #ddd;
+			-webkit-box-shadow:5px 5px 10px #ddd;
+			position:absolute;
+			top:0;
+			left:0;
+		}
+		.tab-content .active{
+			display:block;
+		}
+	</style>
+	<script src="jquery-1.7.2.min.js" ></script>
+	<script src="touchslider.min.js"></script>
+</head>
+<body>
+	<div class="tab">
+		<div class="tab-nav" active="1">
+			<span page="1" class="active">1</span>
+			<span page="2">2</span>
+		</div>
+		<div class="tab-content">
+			<div class="tab-page active" page="1">
+				<div class="touchslider">
+					<div class="touchslider-viewport" style="height:345px;width:500px;overflow:hidden">
+							<div class="touchslider-item">
+								<img src="http://touchslider.com/images/3540231388_f8ec22b549.jpg" />
+							</div>
+							<div class="touchslider-item">
+								<img src="http://touchslider.com/images/3542680555_ea43d85e0a.jpg"/>
+							</div>
+							<div class="touchslider-item">
+								<img src="http://touchslider.com/images/3546828250_6f91b64ba7.jpg"/>
+							</div>
+							<div class="touchslider-item">
+								<img src="http://touchslider.com/images/3540115854_5d302001da.jpg"/>
+							</div>
+
+					</div>
+					<div>
+						<span class="touchslider-nav-item touchslider-nav-item-current">1</span>
+						<span class="touchslider-nav-item">2</span>
+						<span class="touchslider-nav-item">3</span>
+						<span class="touchslider-nav-item">4</span>
+					</div>
+				</div>
+			</div>
+			<div class="tab-page" page="2">content2</div>
+		</div>
+	</div>
+	<script>
+		var t=$('p:last');
+		var position=t.position();
+		console.log(position)
+
+		var b=$('p:last');
+		var p=b.offset();
+		console.log(p)
+		console.log(b.scrollTop())
+
+		$(function(){
+			$('.touchslider').touchSlider({
+				viewport:'.touchslider-viewport',
+				pagination:'.touchslider-nav-item',
+				autoplay:true,
+				currentClass:'touchslider-nav-item-current'
+			})
+		})
+		//tab
+		$(function(){
+			$('.tab-nav').on('click','span',function(){
+				var self=$(this);
+				var next=self.attr('page');
+				var nav=self.parent();
+				var cur=nav.attr('active');
+				if(cur==next){
+					return;
+				}
+				//tab-nav
+				nav.attr('active',next).children().deactive();
+				self.active();
+				//tab-content
+				var tab=nav.next();
+				tab.children().deactive();
+				tab.children('[page='+next+']').active();
+			})
+		})
+
+		//简化method
+		$.fn.active=function(){
+			$(this).addClass('active');
+		}
+		$.fn.deactive=function(){
+			$(this).removeClass('active')
+		}
+
+		$(function(){
+			var arr1=['1','2','3','4'];
+			var arr2=['2','3','5','6'];
+			var arr3=[];
+			for(x in arr1){
+				for(s in arr2){
+					if(arr1[x]===arr2[s]){
+						arr3.push(arr1[x]);
+					}
+				}
+			}
+			console.log(arr3.join('-'))
+		})
+	</script>
+</body>
+</html>

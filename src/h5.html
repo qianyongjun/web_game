@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+	<title>h5 Game</title>
+	<link rel="stylesheet" href="css/h5game.css" type="text/css">
+</head>
+<body>
+<div class="game-wrap">
+	<div class="page" id="loading">
+		<div class="loading-txt">
+		加载中...
+		</div>
+	</div>
+	<div class="page hide" id="index">
+		<h1>看你有多色</h1>
+		<div class="intro">找出所有色块里颜色不同的一个</div>
+		<div class="btns">
+			<button data-type="color" class="btn btn-play">普通模式</button>
+			<button data-type="color2" class="btn btn-play btn-new">双飞模式</button>
+		</div>
+	</div>
+	<div class="page hide" id="main">
+		<header>
+			<span class="score">得分：<em>1</em></span>
+			<span class="time"></span>
+			<span class="btn btn-pause">暂停</span>
+		</header>
+		<div class="lv2" id="box">
+		</div>
+	</div>
+	<div class="page hide" id="dialog">
+		<div class="inner">
+			<div class="content gameover">
+				<div class="inner-content">
+					<h3></h3>
+					<p id="tips">再得<em id="_score"></em>分，就可再打败<em id="_num"></em>万人</p>
+					<div class="btn-wrap clearfix">
+						<button class="btn btn-play" id="mode" data-type="color" >普通场</button>
+						<button class="btn btn-restart">重来</button>
+					</div>
+					<a href="" class="btn btn-more">更多游戏</a>
+				</div>
+			</div>
+			<div class="content pause" >
+				<div class="inner-content">
+					<h3>游戏暂停</h3>
+					<div class="btn-wrap clearfix">
+						<button  class="btn btn-resume">继续</button>
+						<button class="btn btn-restart">重来</button>
+					</div>
+					<a href="" class="btn btn-more">更多游戏</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/libs/jquery-2.1.4.min.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/game/game.js"></script>
+<script src="js/game/h5game.js"></script>
+<script src="js/game/gameCore.js"></script>
+</body>
+</html>

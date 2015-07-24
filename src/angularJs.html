@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyModule">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJs</title>
+	<style>
+		.inputDemo{
+			width:25px;
+			margin-left:100px;
+			position:relative;
+		}
+		input[type="checkbox"]{
+			visibility: hidden;
+		}
+		.checkbox{
+			position:absolute;
+			width:25px;
+			height:25px;
+			border:1px solid #ddd;
+			background:#eee;
+			cursor:pointer;
+		}
+		.checkbox:after{
+			content:' ';
+			position:absolute;
+			width:8px;
+			height:4px;
+			top:7px;
+			left:7px;
+			border:3px solid #333;
+			opacity:0.2;
+			transform:rotate(-45deg);
+			-webkit-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg);
+			-o-transform:rotate(-45deg);
+			border-top:none;
+			border-right:none;
+			transition:opacity 0.4s linear;
+		}
+		.checkbox:hover:after{
+			opacity:0.4;
+		}
+		input[type="checkbox"]:checked+.checkbox:after{
+			opacity:1;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="helloAngular">
+		<p>{{greeting.text}},Angular</p>
+		<hello></hello>
+	</div>
+	<div class="show-scope">
+		<div ng-controller="greetCtrl">
+			Hello {{name}}!
+			<button ng-click="test()">点击</button>
+		</div>
+		<div ng-controller="listCtrl">
+			<ol>
+				<li ng-repeat="i in names">
+					{{i}} from {{department}}
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div ng-controller="EventController">
+		Root scope
+		<tt>MyEvent</tt> count: {{count}}
+		<ul>
+			<li ng-repeat="i in [1]" ng-controller="EventController">
+				<button ng-click="$emit('MyEvent')">
+					$emit('MyEvent')
+				</button>
+				<button ng-click="$broadcast('MyEvent')">
+					$broadcast('MyEvent')
+				</button>
+				<br>
+				Middle scope
+				<tt>MyEvent</tt> count: {{count}}
+				<ul>
+					<li ng-repeat="item in [1,2]" ng-controller="EventController">
+						Leaf scope
+						<tt>MyEvent</tt> count: {{count}}
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="inputDemo">
+		<input type="checkbox" id="checkbox">
+		<label for="checkbox" class="checkbox"></label>
+	</div>
+
+
+
+
+
+<script src="js/libs/angular-1.3.0.js"></script>
+<script src="js/AngularModule.js"></script>
+</body>
+</html>
