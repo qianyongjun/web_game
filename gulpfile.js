@@ -68,7 +68,7 @@ gulp.task('images',function(){
 
 /*****************清除目的目录重建档案**********/
 gulp.task('clean', function() {
-  return gulp.src(['src/css'/*, 'src/dist/js'*/], {read: false})
+  return gulp.src([/*'src/css'*//*'src/dist/js'*/], {read: false})
     .pipe(clean());
 });
 

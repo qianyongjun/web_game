@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+	<title>fullPage</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<style>
+		#menu{
+			position:absolute;
+			z-index:999;
+			*zoom:1;
+		}
+		#menu:clearfix{
+			display:block;
+			content:'';
+			height:0;
+			clear:both;
+		}
+		#menu li{
+			list-style-type:none;
+			float:left;
+		}
+		#menu li a{
+			display:block;
+			height:35px;
+			line-height:35px;
+			text-align:center;
+			width:100px;
+		}
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		.twitter-share-button{
+			position: absolute;
+			z-index: 99;
+			right: 149px;
+			top: 9px;
+		}
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="firstPage">
+		<a href="#firstPage">First slide</a>
+	</li>
+	<li data-menuanchor="secondPage">
+		<a href="#secondPage">Second slide</a>
+	</li>
+	<li data-menuanchor="3rdPage">
+		<a href="#3rdPage">Third slide</a>
+	</li>
+	<li data-menuanchor="4thpage">
+		<a href="#4thpage">Fourth slide</a>
+	</li>
+</ul>
+
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<h1>fullPage.js</h1>
+		<p>Create Beautiful Fullscreen Scrolling Websites</p>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide">
+			<div class="intro">
+				<h1>Create Sliders</h1>
+				<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+			</div>
+
+		</div>
+	    <div class="slide">
+			<div class="intro">
+				<h1>Simple</h1>
+				<p>Easy to use. Configurable and customizable.</p>
+			</div>
+		</div>
+	    <div class="slide">
+			<div class="intro">
+				<h1>Cool</h1>
+				<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+			</div>
+		</div>
+	    <div class="slide">
+			<div class="intro">
+				<h1>Compatible</h1>
+				<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Example</h1>
+			<p>HTML markup example to define 4 sections.</p>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>Working On Tablets</h1>
+			<p>
+				Designed to fit to different screen sizes as well as tablet and mobile devices.
+				<br /><br /><br /><br /><br /><br />
+			</p>
+		</div>
+	</div>
+</div>
+
+<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script src="js/libs/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+		});
+</script>
+</body>
+</html>

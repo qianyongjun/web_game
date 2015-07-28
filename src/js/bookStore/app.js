@@ -3,8 +3,8 @@ var bookStoreApp = angular.module("bookStoreApp",[
 	'bookStoreServices','bookStoreDirectives'
 ]);
 
-//路由编写
-bookStoreApp.config(function($routeProvider){
+//路由编写  angular.js原生路由
+/*bookStoreApp.config(function($routeProvider){
 	$routeProvider.when('/hello',{
 		templateUrl:'tpls/hello.html',
 		controller:'HelloCtrl'
@@ -14,5 +14,6 @@ bookStoreApp.config(function($routeProvider){
 	}).otherwise({
 		redirectTo:'/hello'
 	})
-})
+})*/
+
 
