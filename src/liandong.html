@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>省市级联动</title>
+<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/libs/liandongData.js"></script>
+<script type="text/javascript" src="js/libs/liandong.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.jAddr({
+	    provTip:'-请选择省-',
+		cityTip:'-请选择市-',
+		countyTip:'-请选择县-'
+	});
+});
+</script>
+</head>
+
+<body>
+<select id="province"></select>
+<select id="city"></select>
+<select id="county"></select>
+</body>
+</html>

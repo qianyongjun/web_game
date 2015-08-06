@@ -1,0 +1,62 @@
+
+/* line 286 : F:\web_game\src\stylus\keyframe.styl */
+
+/* line 1 : F:\web_game\node_modules\gulp-stylus\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : F:\web_game\src\stylus\keyframe.styl */
+@-webkit-keyframes person-slow {
+
+/* line 2 : F:\web_game\src\stylus\keyframe.styl */
+  0% {
+    background-position: 0px -291px;
+  }
+
+/* line 5 : F:\web_game\src\stylus\keyframe.styl */
+  25% {
+    background-position: -602px 0px;
+  }
+
+/* line 8 : F:\web_game\src\stylus\keyframe.styl */
+  50% {
+    background-position: -302px -291px;
+  }
+
+/* line 11 : F:\web_game\src\stylus\keyframe.styl */
+  75% {
+    background-position: -151px -291px;
+  }
+
+/* line 14 : F:\web_game\src\stylus\keyframe.styl */
+  100% {
+    background-position: 0px -291px;
+  }
+}
+
+/* line 19 : F:\web_game\src\stylus\keyframe.styl */
+@-moz-keyframes person-slow {
+
+/* line 20 : F:\web_game\src\stylus\keyframe.styl */
+  0% {
+    background-position: 0px -291px;
+  }
+
+/* line 23 : F:\web_game\src\stylus\keyframe.styl */
+  25% {
+    background-position: -602px 0px;
+  }
+
+/* line 26 : F:\web_game\src\stylus\keyframe.styl */
+  50% {
+    background-position: -302px -291px;
+  }
+
+/* line 29 : F:\web_game\src\stylus\keyframe.styl */
+  75% {
+    background-position: -151px -291px;
+  }
+
+/* line 32 : F:\web_game\src\stylus\keyframe.styl */
+  100% {
+    background-position: 0px -291px;
+  }
+}

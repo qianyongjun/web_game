@@ -1,0 +1,120 @@
+
+/* line 286 : F:\web_game\src\stylus\animation.styl */
+
+/* line 1 : F:\web_game\node_modules\gulp-stylus\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : F:\web_game\src\stylus\animation.styl */
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 4 : F:\web_game\src\stylus\animation.styl */
+ul,
+li,
+ol,
+dl,
+dt,
+dd {
+  list-style-type: none;
+}
+
+/* line 6 : F:\web_game\src\stylus\animation.styl */
+#content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* line 15 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap {
+  position: relative;
+}
+
+/* line 17 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 21 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .a_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 25 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .a_background .bg_top {
+  width: 100%;
+  height: 71.6%;
+  background-image: url("/images/background/a_background_top.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 31 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .a_background .bg_middle {
+  width: 100%;
+  height: 13.1%;
+  background-image: url("/images/background/a_background_middle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 37 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .a_background .bg_bottom {
+  width: 100%;
+  height: 15.3%;
+  background-image: url("/images/background/a_background_bottom.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 43 : F:\web_game\src\stylus\animation.styl */
+#content .person {
+  width: 151px;
+  height: 291px;
+  position: absolute;
+  left: 0%;
+  top: 55%;
+  background: url("/images/boy.png") 0 -291px no-repeat;
+}
+
+/* line 50 : F:\web_game\src\stylus\animation.styl */
+#content .walk {
+  -webkit-animation-name: person-slow;
+  -webkit-animation-duration: 950ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(1, start);
+  -moz-animation-name: person-slow;
+  -moz-animation-duration: 950ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: steps(1, start);
+}
+
+/* line 59 : F:\web_game\src\stylus\animation.styl */
+#content .pause {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+}

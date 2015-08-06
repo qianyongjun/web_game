@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="css/animation.css" type="text/css">
+	<link rel="stylesheet" href="css/keyframe.css" type="text/css">
+</head>
+<body>
+	<div id="content">
+		<ul class="content-wrap">
+			<li>
+				<div class="a_background">
+					<div class="bg_top"></div>
+					<div class="bg_middle"></div>
+					<div class="bg_bottom"></div>
+				</div>
+			</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<div id="boy" class="person"></div>
+	</div>
+
+	<script src="js/libs/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery-transition.js"></script>
+	<script src="js/Swipe.js"></script>
+	<script src="js/animation.js"></script>
+	<script>
+	$(function(){
+		var container = $('#content');
+		var swipe = Swipe(container);
+
+		var boy = Animation();
+
+		boy.walkTo(2000, 0.2)
+			.then(function() {
+			//第一次走路完成
+				boy.setColor('red');
+				return boy.walkTo(2000,0.4)
+			}).then(function(){
+				boy.setColor('blue')
+			})
+
+	})
+	</script>
+</body>
+</html>
