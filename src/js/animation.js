@@ -45,6 +45,19 @@ function Animation(){
 		$boy.removeClass('pause')
 	};
 
+	//太阳移动
+	function sunmove(){
+		var sun = $('#sun');
+		sun.addClass('sunmove')
+	}
+
+	//云朵移动
+	function cloudmove(){
+		var cloud = $('.cloud');
+		cloud.eq(0).addClass('cloud1Move');
+		cloud.eq(1).addClass('cloud2Move')
+	}
+
 	//人物transition移动
 	function startWalk(options, time) {
 		var dtd = $.Deferred();
@@ -55,10 +68,10 @@ function Animation(){
 			options,
 			time,
 			'linear',
-			function() {
+			function(){
 				dtd.resolve(); //动画完成
 			});
-		return dtd.promise();
+		return dtd;
 	};
 	// var dtd = $.Deferred(); //创建
 	// dtd.resolve();  //成功
@@ -95,6 +108,12 @@ function Animation(){
 		},
 		setColor:function(value){
 			$boy.css('background-color',value)
+		},
+		sunmove:function(){
+			sunmove();
+		},
+		cloudmove:function(){
+			cloudmove()
 		}
 	}
 }

@@ -40,6 +40,39 @@ ul,li,ol,dl,dt,dd
 					background-image url('/images/background/a_background_bottom.png')
 					background-repeat no-repeat
 					background-size 100% 100%
+			#sun
+				width 201px
+				height 201px
+				position absolute
+				top -30px
+				right 40%
+				z-index 1
+				background url('/images/sun.png') 0 0 no-repeat
+			.sunmove
+				-webkit-animation sun-move 30s
+				-moz-animation sun-move 30s
+			#cloud	
+				.cloud
+					position absolute
+					z-index 2
+				.cloud1
+					background url('/images/cloud1.png') 0 0 no-repeat
+					width 181px
+					height 101px
+					top 15%
+					left -5%
+				.cloud2
+					background url('/images/cloud2.png') 0 0 no-repeat
+					width 301px
+					height 140px
+					top 0
+					right -5%
+				.cloud1Move
+					-webkit-animation smallCloud 30s infinite
+					-moz-animation smallCloud 30s infinite
+				.cloud2Move
+					-webkit-animation largeCloud 60s infinite
+					-moz-animation largeCloud 60s infinite
 	.person
 		width 151px
 		height 291px

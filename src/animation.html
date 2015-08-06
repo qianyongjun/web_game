@@ -15,14 +15,22 @@
 					<div class="bg_middle"></div>
 					<div class="bg_bottom"></div>
 				</div>
+				<div id="sun"></div>
+				<div id="cloud">
+					<div class="cloud cloud1"></div>
+					<div class="cloud cloud2"></div>
+				</div>
 			</li>
-			<li>2</li>
+			<li>
+				<div class="b_background_dark"></div>
+				<div class="b_background_bright"></div>
+			</li>
 			<li>3</li>
 		</ul>
 		<div id="boy" class="person"></div>
 	</div>
 
-	<script src="js/libs/jquery-1.7.2.min.js"></script>
+	<script src="js/libs/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery-transition.js"></script>
 	<script src="js/Swipe.js"></script>
 	<script src="js/animation.js"></script>
@@ -30,18 +38,35 @@
 	$(function(){
 		var container = $('#content');
 		var swipe = Swipe(container);
+		//页面滚动
+		function scrollTo(time,proportion){
+			var disX = container.width()*proportion;
+			swipe.scrollTo(disX,time)
+		}
+
 
 		var boy = Animation();
 
 		boy.walkTo(2000, 0.2)
-			.then(function() {
-			//第一次走路完成
-				boy.setColor('red');
-				return boy.walkTo(2000,0.4)
-			}).then(function(){
-				boy.setColor('blue')
+            .then(function() {
+                //第一次走路完成
+                scrollTo(5000,0.5);
+                boy.sunmove();
+                boy.cloudmove();
+			}).then(function() {
+			    //第二次走
+			    return boy.walkTo(2000, 0.4)
+			}).then(function() {
+			    //第二次走路完成
+			   
+			}).then(function() {
+			    //第三次走路
+			    return boy.walkTo(2000, 0.6)
+			}).then(function() {
+			    //第三次走路完成
+			    
 			})
-
+              
 	})
 	</script>
 </body>
