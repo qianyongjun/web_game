@@ -1,9 +1,9 @@
 
-/* line 286 : D:\web-game\src\stylus\h5game.styl */
+/* line 286 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 1 : D:\web-game\node_modules\gulp-stylus\node_modules\stylus\lib\functions\index.styl */
+/* line 1 : F:\web_game\node_modules\gulp-stylus\node_modules\stylus\lib\functions\index.styl */
 
-/* line 16 : D:\web-game\src\stylus\h5game.styl */
+/* line 16 : F:\web_game\src\stylus\h5game.styl */
 body {
   background-color: #f06060;
   color: #fff;
@@ -11,9 +11,9 @@ body {
   margin: 0;
 }
 
-/* line 21 : D:\web-game\src\stylus\h5game.styl */
+/* line 21 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 22 : D:\web-game\src\stylus\h5game.styl */
+/* line 22 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap .btn {
   display: block;
   background-color: #fcad26;
@@ -38,12 +38,12 @@ body .game-wrap .btn {
   outline: 0;
 }
 
-/* line 44 : D:\web-game\src\stylus\h5game.styl */
+/* line 44 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap .hide {
   display: none;
 }
 
-/* line 46 : D:\web-game\src\stylus\h5game.styl */
+/* line 46 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap .page {
   position: absolute;
   top: 0;
@@ -52,13 +52,13 @@ body .game-wrap .page {
   right: 0;
 }
 
-/* line 52 : D:\web-game\src\stylus\h5game.styl */
+/* line 52 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #loading {
   text-align: center;
   font-size: 30px;
 }
 
-/* line 55 : D:\web-game\src\stylus\h5game.styl */
+/* line 55 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #loading .loading-txt {
   position: absolute;
   top: 0;
@@ -70,9 +70,9 @@ body .game-wrap #loading .loading-txt {
   margin: auto;
 }
 
-/* line 64 : D:\web-game\src\stylus\h5game.styl */
+/* line 64 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 65 : D:\web-game\src\stylus\h5game.styl */
+/* line 65 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #index h1 {
   padding: 30px 0;
   font-size: 30px;
@@ -80,14 +80,14 @@ body .game-wrap #index h1 {
   text-shadow: 1px 1px 1px #ab3c3c 3;
 }
 
-/* line 70 : D:\web-game\src\stylus\h5game.styl */
+/* line 70 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #index .intro {
   font-size: 16px;
   text-align: center;
   opacity: 0.5;
 }
 
-/* line 74 : D:\web-game\src\stylus\h5game.styl */
+/* line 74 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #index .btns {
   position: absolute;
   bottom: 10px;
@@ -97,12 +97,12 @@ body .game-wrap #index .btns {
   color: #fff;
 }
 
-/* line 81 : D:\web-game\src\stylus\h5game.styl */
+/* line 81 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #index .btns .btn {
   margin: 0 auto 18px;
 }
 
-/* line 83 : D:\web-game\src\stylus\h5game.styl */
+/* line 83 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #index .btns .btn-new {
   background-color: #5cbcf6;
   box-shadow: 0 5px #49a7df;
@@ -110,9 +110,9 @@ body .game-wrap #index .btns .btn-new {
   -moz-box-shadow: 0 5px #49a7df;
 }
 
-/* line 88 : D:\web-game\src\stylus\h5game.styl */
+/* line 88 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 89 : D:\web-game\src\stylus\h5game.styl */
+/* line 89 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main header {
   position: absolute;
   top: 0;
@@ -125,19 +125,19 @@ body .game-wrap #main header {
   color: #ffa1a1;
 }
 
-/* line 99 : D:\web-game\src\stylus\h5game.styl */
+/* line 99 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main header .score {
   position: absolute;
   top: 0;
   left: 10px;
 }
 
-/* line 103 : D:\web-game\src\stylus\h5game.styl */
+/* line 103 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main header .score em {
   font-style: normal;
 }
 
-/* line 105 : D:\web-game\src\stylus\h5game.styl */
+/* line 105 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main header .time {
   padding: 0 10px;
   font-weight: 500;
@@ -149,13 +149,13 @@ body .game-wrap #main header .time {
   -moz-border-radius: 20px;
 }
 
-/* line 114 : D:\web-game\src\stylus\h5game.styl */
+/* line 114 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main header .danger {
   color: #ff0505;
   background-color: #fff;
 }
 
-/* line 117 : D:\web-game\src\stylus\h5game.styl */
+/* line 117 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main header .btn-pause {
   position: absolute;
   top: 5px;
@@ -168,7 +168,7 @@ body .game-wrap #main header .btn-pause {
   font-weight: bold;
 }
 
-/* line 127 : D:\web-game\src\stylus\h5game.styl */
+/* line 127 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main #box {
   position: absolute;
   top: 0;
@@ -183,7 +183,7 @@ body .game-wrap #main #box {
   background-color: #ddd;
 }
 
-/* line 139 : D:\web-game\src\stylus\h5game.styl */
+/* line 139 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main #box span {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -195,79 +195,79 @@ body .game-wrap #main #box span {
   float: left;
 }
 
-/* line 148 : D:\web-game\src\stylus\h5game.styl */
+/* line 148 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 149 : D:\web-game\src\stylus\h5game.styl */
+/* line 149 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv2 span {
   width: 50%;
   height: 50%;
 }
 
-/* line 152 : D:\web-game\src\stylus\h5game.styl */
+/* line 152 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 153 : D:\web-game\src\stylus\h5game.styl */
+/* line 153 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv3 span {
   width: 33.33%;
   height: 33.33%;
 }
 
-/* line 156 : D:\web-game\src\stylus\h5game.styl */
+/* line 156 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 157 : D:\web-game\src\stylus\h5game.styl */
+/* line 157 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv4 span {
   width: 25%;
   height: 25%;
 }
 
-/* line 160 : D:\web-game\src\stylus\h5game.styl */
+/* line 160 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 161 : D:\web-game\src\stylus\h5game.styl */
+/* line 161 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv5 span {
   width: 20%;
   height: 20%;
 }
 
-/* line 164 : D:\web-game\src\stylus\h5game.styl */
+/* line 164 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 165 : D:\web-game\src\stylus\h5game.styl */
+/* line 165 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv6 span {
   width: 16.66%;
   height: 16.66%;
 }
 
-/* line 168 : D:\web-game\src\stylus\h5game.styl */
+/* line 168 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 169 : D:\web-game\src\stylus\h5game.styl */
+/* line 169 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv7 span {
   width: 14.28%;
   height: 14.28%;
 }
 
-/* line 172 : D:\web-game\src\stylus\h5game.styl */
+/* line 172 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 173 : D:\web-game\src\stylus\h5game.styl */
+/* line 173 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv8 span {
   width: 12.5%;
   height: 12.5%;
 }
 
-/* line 176 : D:\web-game\src\stylus\h5game.styl */
+/* line 176 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 177 : D:\web-game\src\stylus\h5game.styl */
+/* line 177 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv9 span {
   width: 11.11%;
   height: 11.11%;
 }
 
-/* line 180 : D:\web-game\src\stylus\h5game.styl */
+/* line 180 : F:\web_game\src\stylus\h5game.styl */
 
-/* line 181 : D:\web-game\src\stylus\h5game.styl */
+/* line 181 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #main .lv10 span {
   width: 10%;
   height: 10%;
 }
 
-/* line 184 : D:\web-game\src\stylus\h5game.styl */
+/* line 184 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog {
   background-color: #a74343;
   padding-top: 50px;
@@ -275,12 +275,12 @@ body .game-wrap #dialog {
   -webkit-box-sizing: border-box;
 }
 
-/* line 189 : D:\web-game\src\stylus\h5game.styl */
+/* line 189 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .btn {
   margin: 15px auto;
 }
 
-/* line 191 : D:\web-game\src\stylus\h5game.styl */
+/* line 191 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner {
   height: 617px;
   width: 375px;
@@ -288,12 +288,12 @@ body .game-wrap #dialog .inner {
   font-size: 20px;
 }
 
-/* line 196 : D:\web-game\src\stylus\h5game.styl */
+/* line 196 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content {
   padding-top: 30px;
 }
 
-/* line 198 : D:\web-game\src\stylus\h5game.styl */
+/* line 198 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content {
   position: absolute;
   top: 0;
@@ -305,7 +305,7 @@ body .game-wrap #dialog .inner .content .inner-content {
   margin: auto;
 }
 
-/* line 207 : D:\web-game\src\stylus\h5game.styl */
+/* line 207 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content h3 {
   color: #321;
   font-size: 40px;
@@ -313,29 +313,29 @@ body .game-wrap #dialog .inner .content .inner-content h3 {
   line-height: 60px;
 }
 
-/* line 212 : D:\web-game\src\stylus\h5game.styl */
+/* line 212 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content .btn-wrap {
   width: 220px;
   margin: 0 auto;
 }
 
-/* line 215 : D:\web-game\src\stylus\h5game.styl */
+/* line 215 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content .btn-wrap .btn {
   width: 105px;
   float: left;
 }
 
-/* line 218 : D:\web-game\src\stylus\h5game.styl */
+/* line 218 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content .btn-wrap .btn-restart {
   margin-left: 10px;
 }
 
-/* line 220 : D:\web-game\src\stylus\h5game.styl */
+/* line 220 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content .btn-more {
   text-decoration: none;
 }
 
-/* line 222 : D:\web-game\src\stylus\h5game.styl */
+/* line 222 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog .inner .content .inner-content .clearfix:after {
   clear: both;
   content: " ";
@@ -343,7 +343,7 @@ body .game-wrap #dialog .inner .content .inner-content .clearfix:after {
   display: block;
 }
 
-/* line 227 : D:\web-game\src\stylus\h5game.styl */
+/* line 227 : F:\web_game\src\stylus\h5game.styl */
 body .game-wrap #dialog:after {
   position: absolute;
   top: 0;

@@ -1,9 +1,9 @@
 
-/* line 286 : D:\web-game\src\stylus\animation.styl */
+/* line 286 : F:\web_game\src\stylus\animation.styl */
 
-/* line 1 : D:\web-game\node_modules\gulp-stylus\node_modules\stylus\lib\functions\index.styl */
+/* line 1 : F:\web_game\node_modules\gulp-stylus\node_modules\stylus\lib\functions\index.styl */
 
-/* line 1 : D:\web-game\src\stylus\animation.styl */
+/* line 1 : F:\web_game\src\stylus\animation.styl */
 body,
 div,
 h1,
@@ -23,7 +23,7 @@ ol {
   margin: 0;
 }
 
-/* line 4 : D:\web-game\src\stylus\animation.styl */
+/* line 4 : F:\web_game\src\stylus\animation.styl */
 ul,
 li,
 ol,
@@ -33,7 +33,7 @@ dd {
   list-style-type: none;
 }
 
-/* line 6 : D:\web-game\src\stylus\animation.styl */
+/* line 6 : F:\web_game\src\stylus\animation.styl */
 #content {
   width: 100%;
   height: 100%;
@@ -45,26 +45,26 @@ dd {
   overflow: hidden;
 }
 
-/* line 15 : D:\web-game\src\stylus\animation.styl */
+/* line 15 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap {
   position: relative;
 }
 
-/* line 17 : D:\web-game\src\stylus\animation.styl */
+/* line 17 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li {
   float: left;
   overflow: hidden;
   position: relative;
 }
 
-/* line 21 : D:\web-game\src\stylus\animation.styl */
+/* line 21 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li .a_background {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-/* line 25 : D:\web-game\src\stylus\animation.styl */
+/* line 25 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li .a_background .bg_top {
   width: 100%;
   height: 71.6%;
@@ -73,7 +73,7 @@ dd {
   background-size: 100% 100%;
 }
 
-/* line 31 : D:\web-game\src\stylus\animation.styl */
+/* line 31 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li .a_background .bg_middle {
   width: 100%;
   height: 13.1%;
@@ -82,7 +82,7 @@ dd {
   background-size: 100% 100%;
 }
 
-/* line 37 : D:\web-game\src\stylus\animation.styl */
+/* line 37 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li .a_background .bg_bottom {
   width: 100%;
   height: 15.3%;
@@ -91,7 +91,7 @@ dd {
   background-size: 100% 100%;
 }
 
-/* line 43 : D:\web-game\src\stylus\animation.styl */
+/* line 43 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li #sun {
   width: 201px;
   height: 201px;
@@ -102,21 +102,21 @@ dd {
   background: url("/images/sun.png") 0 0 no-repeat;
 }
 
-/* line 51 : D:\web-game\src\stylus\animation.styl */
+/* line 51 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li .sunmove {
   -webkit-animation: sun-move 30s;
   -moz-animation: sun-move 30s;
 }
 
-/* line 54 : D:\web-game\src\stylus\animation.styl */
+/* line 54 : F:\web_game\src\stylus\animation.styl */
 
-/* line 55 : D:\web-game\src\stylus\animation.styl */
+/* line 55 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li #cloud .cloud {
   position: absolute;
   z-index: 2;
 }
 
-/* line 58 : D:\web-game\src\stylus\animation.styl */
+/* line 58 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li #cloud .cloud1 {
   background: url("/images/cloud1.png") 0 0 no-repeat;
   width: 181px;
@@ -125,7 +125,7 @@ dd {
   left: -5%;
 }
 
-/* line 64 : D:\web-game\src\stylus\animation.styl */
+/* line 64 : F:\web_game\src\stylus\animation.styl */
 #content .content-wrap >li #cloud .cloud2 {
   background: url("/images/cloud2.png") 0 0 no-repeat;
   width: 301px;
@@ -134,19 +134,83 @@ dd {
   right: -5%;
 }
 
-/* line 70 : D:\web-game\src\stylus\animation.styl */
-#content .content-wrap >li #cloud .cloud1Move {
-  -webkit-animation: smallCloud 30s infinite;
-  -moz-animation: smallCloud 30s infinite;
+/* line 70 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .b_background_dark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/images/background/b-dark.png");
+  background-size: 100% 100%;
 }
 
-/* line 73 : D:\web-game\src\stylus\animation.styl */
-#content .content-wrap >li #cloud .cloud2Move {
-  -webkit-animation: largeCloud 60s infinite;
-  -moz-animation: largeCloud 60s infinite;
+/* line 76 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .b_background_bright {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("/images/background/b-bright.png") no-repeat -9999px -9999px;
 }
 
-/* line 76 : D:\web-game\src\stylus\animation.styl */
+/* line 81 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .b_lightup {
+  background: url("/images/background/b-bright.png");
+  background-size: 100% 100%;
+}
+
+/* line 84 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .shop {
+  position: absolute;
+  width: 39.5%;
+  height: 35%;
+  left: 29%;
+  top: 36.5%;
+}
+
+/* line 90 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .shop .door {
+  position: absolute;
+  width: 32%;
+  height: 68%;
+  top: 33%;
+  left: 58.5%;
+  overflow: hidden;
+}
+
+/* line 97 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .shop .door z-index,
+#content .content-wrap >li .shop .door .door-left,
+#content .content-wrap >li .shop .door .door-right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+/* line 102 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .shop .door .door-left {
+  background-image: url("/images/door-left.png");
+  background-size: 100% 100%;
+  left: 0;
+}
+
+/* line 106 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .shop .door .door-right {
+  background-image: url("/images/door-right.png");
+  background-size: 100% 100%;
+  left: 50%;
+}
+
+/* line 110 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .bird {
+  position: absolute;
+  background: url("/images/bird.png") 0 0 no-repeat;
+  width: 91px;
+  height: 71px;
+  right: -91px;
+  top: 10%;
+  z-index: 10;
+}
+
+/* line 118 : F:\web_game\src\stylus\animation.styl */
 #content .person {
   width: 151px;
   height: 291px;
@@ -156,7 +220,19 @@ dd {
   background: url("/images/boy.png") 0 -291px no-repeat;
 }
 
-/* line 83 : D:\web-game\src\stylus\animation.styl */
+/* line 125 : F:\web_game\src\stylus\animation.styl */
+#content .cloud1Move {
+  -webkit-animation: smallCloud 30s infinite;
+  -moz-animation: smallCloud 30s infinite;
+}
+
+/* line 128 : F:\web_game\src\stylus\animation.styl */
+#content .cloud2Move {
+  -webkit-animation: largeCloud 40s infinite;
+  -moz-animation: largeCloud 40s infinite;
+}
+
+/* line 131 : F:\web_game\src\stylus\animation.styl */
 #content .walk {
   -webkit-animation-name: person-slow;
   -webkit-animation-duration: 950ms;
@@ -168,8 +244,32 @@ dd {
   -moz-animation-timing-function: steps(1, start);
 }
 
-/* line 92 : D:\web-game\src\stylus\animation.styl */
+/* line 140 : F:\web_game\src\stylus\animation.styl */
 #content .pause {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
+}
+
+/* line 143 : F:\web_game\src\stylus\animation.styl */
+#content .flower {
+  -webkit-animation-name: person-flower;
+  -webkit-animation-duration: 950ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(1, start);
+  -moz-animation-name: person-flower;
+  -moz-animation-duration: 950ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: steps(1, start);
+}
+
+/* line 152 : F:\web_game\src\stylus\animation.styl */
+#content .fly {
+  -webkit-animation-name: birdFly;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: step-start;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: birdFly;
+  -moz-animation-duration: 400ms;
+  -moz-animation-timing-function: step-start;
+  -moz-animation-iteration-count: infinite;
 }

@@ -1,3 +1,67 @@
+//开门关门
+function doorAction(left,right,time){
+	var doorLeft = $('.door-left');
+	var doorRight = $('.door-right');
+	var dtd = $.Deferred();
+	var count = 2;
+	var done = function(){
+		if(count == 1){
+			dtd.resolve();
+			return;
+		}
+		count--;
+	}
+	//左侧门移动
+	doorLeft.transition({
+		'left': left
+	},time,done);
+	//右侧门移动
+	doorRight.transition({
+		'left': right
+	},time,done);
+
+	return dtd;
+}
+
+
+//开门
+function openDoor(){
+	return doorAction('-50%','100%',1000)
+}
+
+//关门
+function closeDoor(){
+	return doorAction('0%','50%',1000)
+}
+
+//定义移动位置
+//translateX = 门中间的left值 - 小男孩中间的left值
+//translateY = 人物底部的top值 - 门中间的top值
+var distance;
+
+//开灯
+var light = {
+	$element : $('.b_background_dark'),
+	on:function(){
+		this.$element.addClass('b_lightup')
+	},
+	off:function(){
+		this.$element.removeClass('b_lightup')
+	}
+}
+
+//鸟飞
+var bird={
+	$element: $('.bird'),
+	fly:function(){
+		this.$element.addClass('fly');
+		this.$element.transition({
+			right: $('#content').width()
+		}, 10000 , 'linear')
+	}
+};
+
+
 function Animation(){
 	var container = $('#content');
 	/*swipe.scrollTo($('#content').width(),10000)*/
@@ -27,7 +91,7 @@ function Animation(){
 
 	//计算小男孩坐标
 	$boy.css({
-		top: middle_path - boyHeight
+		top: middle_path - boyHeight + 25
 	});
 
 	//css3移动
@@ -45,18 +109,17 @@ function Animation(){
 		$boy.removeClass('pause')
 	};
 
-	//太阳移动
-	function sunmove(){
-		var sun = $('#sun');
-		sun.addClass('sunmove')
+	//男孩捧花，做一个间隔动作
+	function flower(){
+		var dtd = $.Deferred();
+		setTimeout(function(){
+			$boy.removeClass('walk').addClass('flower');
+			dtd.resolve();
+		},1000);
+
+		return dtd;
 	}
 
-	//云朵移动
-	function cloudmove(){
-		var cloud = $('.cloud');
-		cloud.eq(0).addClass('cloud1Move');
-		cloud.eq(1).addClass('cloud2Move')
-	}
 
 	//人物transition移动
 	function startWalk(options, time) {
@@ -95,6 +158,49 @@ function Animation(){
 		return (direction == "x" ? width : height) * proportion;
 	};
 
+	//进入商店
+	function walkToShop(runtime){
+		var dtd = $.Deferred();
+		var door = $('.door');
+		//门位置
+		var doorPos = door.offset();
+		var doorPosLeft = doorPos.left;
+		//男孩位置
+		var boyPos = $boy.offset();
+		var boyPosLeft = boyPos.left;
+
+		distance = (doorPosLeft + door.width() / 2) - (boyPosLeft + $boy.width() / 2);
+		console.log(distance)
+		//开始进入商店
+		var walkPlay = startWalk({
+			transform :  'translateY(' + distance +'px),scale(0.3,0.3)',
+			opacity : 0.1
+		},runtime);
+		//完全进入
+		walkPlay.done(function(){
+			$boy.css({
+				opacity:0
+			});
+			dtd.resolve();
+		});
+		return dtd;
+	}
+
+	//走出商店
+	function walkOutShop(runtime){
+		var dtd = $.Deferred();
+		var walkPlay = startWalk({
+			transform :  'translateY(' + distance +'px),scale(1,1)',
+			opacity : 1
+		},runtime);
+		//完全进入
+		walkPlay.done(function(){
+			dtd.resolve();
+		});
+		return dtd;
+	}
+
+
 	return{
 		//开始走路,定义多久时间移动多少距离
 		walkTo: function(time,proportionX,proportionY){
@@ -106,14 +212,15 @@ function Animation(){
 		stopMove:function(){
 			pause();
 		},
-		setColor:function(value){
-			$boy.css('background-color',value)
+		intoShop:function(){
+			return walkToShop.apply(null,arguments)//intoShop方法 继承walkToShop函数参数
 		},
-		sunmove:function(){
-			sunmove();
+		outShop:function(){
+			return walkOutShop.apply(null,arguments)
 		},
-		cloudmove:function(){
-			cloudmove()
+		flower:function(){
+			return flower();
 		}
+		//一定切记，deferred对象返回状态，函数一定要return Func
 	}
 }
