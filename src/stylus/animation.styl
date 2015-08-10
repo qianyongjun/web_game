@@ -115,6 +115,80 @@ ul,li,ol,dl,dt,dd
 				right -91px
 				top 10%
 				z-index 10
+			.c_background
+				position absolute
+				width 100%
+				height 100%
+				.bg_top
+					width 100%
+					height 71.6%
+					background-image url('/images/background/c_background_top.png')
+					background-size 100% 100%
+				.bg_middle
+					width 100%
+					height 13.1%
+					background-image url('/images/background/c_background_middle.png')
+					background-size 100% 100%
+				.bg_bottom
+					width 100%
+					height 15.3%
+					background-image url('/images/background/c_background_bottom.png')
+					background-size 100% 100%
+			.girl
+				position absolute
+				width 151px
+				height 290px
+				background-image url('/images/girl.png')
+				background-position -151px 0
+				left 60%
+				top 37%
+			.water
+				position absolute
+				width 41%
+				height 24%
+				left 29.5%
+				top 76%
+				overflow hidden
+				.water1,.water2,.water3,.water4
+					position absolute
+					width 100%
+					height 50%
+					-webkit-animation-name shake
+					-webkit-animation-duration 40s
+					-webkit-animation-direction alternate
+					-webkit-anination-timing-function linear
+					-webkit-animation-iteration-count infinite
+					-moz-animation-name shake
+					-moz-animation-duration 40s
+					-moz-animation-direction alternate
+					-moz-anination-timing-function linear
+					-moz-animation-iteration-count infinite
+				.water1
+					width 131px
+					height 15px
+					top 13%
+					left 35%
+					background url('/images/water.png') -261px -0px no-repeat
+				.water2
+					width 161px
+					height 9px
+					top 30%
+					left 45%
+					background url('/images/water.png') -693px -0px no-repeat
+				.water3
+					width 261px
+					height 29px
+					top 50%
+					left 15%
+					background url('/images/water.png') -0px -0px no-repeat
+				.water4
+					width 301px
+					height 12px
+					top 75%
+					left 30%
+					background url('/images/water.png') -392px -0px no-repeat
+
+
 	.person
 		width 151px
 		height 291px
@@ -122,6 +196,8 @@ ul,li,ol,dl,dt,dd
 		left 0%
 		top 55%
 		background url('/images/boy.png') 0 -291px no-repeat
+	.person-reset
+		background url('/images/boy.png') -151px 0 no-repeat
 	.cloud1Move
 		-webkit-animation smallCloud 30s infinite
 		-moz-animation smallCloud 30s infinite

@@ -23,7 +23,6 @@ function doorAction(left,right,time){
 	return dtd;
 }
 
-
 //开门
 function openDoor(){
 	return doorAction('-50%','100%',1000)
@@ -38,7 +37,27 @@ function closeDoor(){
 //translateX = 门中间的left值 - 小男孩中间的left值
 //translateY = 人物底部的top值 - 门中间的top值
 var distance;
+var container = $('#content');
+var swipe = Swipe(container);
 
+var initWidth = container.width();
+var initHeight = container.height();
+
+
+//获取数据
+var getValue = function(className) {
+        var $elem = $(className);
+        // 走路的路线坐标
+        return {
+            height: $elem.height(),
+            top: $elem.position().top
+        };
+    };
+//定义滚屏
+function scrollTo(time,proportion){
+			var disX = container.width()*proportion;
+			swipe.scrollTo(disX,time)
+		}
 //开灯
 var light = {
 	$element : $('.b_background_dark'),
@@ -61,6 +80,35 @@ var bird={
 	}
 };
 
+var girlPosY = function(){
+	var data = getValue('.c_background .bg_middle');
+	return data.top;
+}
+
+
+//小女孩
+var girl={
+	$ele: $('.girl'),
+	getHeight: function(){
+		return this.$ele.height();
+	},
+	getWidth: function(){
+		return this.$ele.width();
+	},
+	//女孩转身
+	rotate: function(){
+		this.$ele.addClass('girl-rotate')
+	},
+	getOffset: function(){
+		return this.$ele.offset();
+	},
+	setOffset: function(){
+		this.$ele.css({
+			left: initWidth / 2,
+			top: girlPosY - this.getHeight()
+		})
+	}
+}
 
 function Animation(){
 	var container = $('#content');
@@ -73,15 +121,6 @@ function Animation(){
 	var height = $('#content').height();
 
 	//小男孩坐标top值 = 中间路段的中间坐标值 - 小男孩的高度
-	//获取数据
-	var getValue = function(className){
-		var $ele = $(className);
-		return {
-			height: $ele.height(),
-			top: $ele.position().top
-		}
-	};
-
 	//获取中间路段中间值
 	//即top值加上自身height的一半
 	var middle_path = function(){
@@ -110,7 +149,7 @@ function Animation(){
 	};
 
 	//男孩捧花，做一个间隔动作
-	function flower(){
+	function getFlower(){
 		var dtd = $.Deferred();
 		setTimeout(function(){
 			$boy.removeClass('walk').addClass('flower');
@@ -200,7 +239,6 @@ function Animation(){
 		return dtd;
 	}
 
-
 	return{
 		//开始走路,定义多久时间移动多少距离
 		walkTo: function(time,proportionX,proportionY){
@@ -219,7 +257,14 @@ function Animation(){
 			return walkOutShop.apply(null,arguments)
 		},
 		flower:function(){
-			return flower();
+			return getFlower();
+		},
+		Reset:function(){
+			this.stopMove();
+			$boy.removeClass('flower walk').addClass('person-reset')
+		},
+		getWidth: function(){
+			return $boy.width();
 		}
 		//一定切记，deferred对象返回状态，函数一定要return Func
 	}

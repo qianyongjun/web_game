@@ -211,6 +211,114 @@ dd {
 }
 
 /* line 118 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .c_background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 122 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .c_background .bg_top {
+  width: 100%;
+  height: 71.6%;
+  background-image: url("/images/background/c_background_top.png");
+  background-size: 100% 100%;
+}
+
+/* line 127 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .c_background .bg_middle {
+  width: 100%;
+  height: 13.1%;
+  background-image: url("/images/background/c_background_middle.png");
+  background-size: 100% 100%;
+}
+
+/* line 132 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .c_background .bg_bottom {
+  width: 100%;
+  height: 15.3%;
+  background-image: url("/images/background/c_background_bottom.png");
+  background-size: 100% 100%;
+}
+
+/* line 137 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .girl {
+  position: absolute;
+  width: 151px;
+  height: 290px;
+  background-image: url("/images/girl.png");
+  background-position: -151px 0;
+  left: 60%;
+  top: 37%;
+}
+
+/* line 145 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .water {
+  position: absolute;
+  width: 41%;
+  height: 24%;
+  left: 29.5%;
+  top: 76%;
+  overflow: hidden;
+}
+
+/* line 152 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .water .water1,
+#content .content-wrap >li .water .water2,
+#content .content-wrap >li .water .water3,
+#content .content-wrap >li .water .water4 {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  -webkit-animation-name: shake;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-direction: alternate;
+  -webkit-anination-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: shake;
+  -moz-animation-duration: 40s;
+  -moz-animation-direction: alternate;
+  -moz-anination-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+}
+
+/* line 166 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .water .water1 {
+  width: 131px;
+  height: 15px;
+  top: 13%;
+  left: 35%;
+  background: url("/images/water.png") -261px 0px no-repeat;
+}
+
+/* line 172 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .water .water2 {
+  width: 161px;
+  height: 9px;
+  top: 30%;
+  left: 45%;
+  background: url("/images/water.png") -693px 0px no-repeat;
+}
+
+/* line 178 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .water .water3 {
+  width: 261px;
+  height: 29px;
+  top: 50%;
+  left: 15%;
+  background: url("/images/water.png") 0px 0px no-repeat;
+}
+
+/* line 184 : F:\web_game\src\stylus\animation.styl */
+#content .content-wrap >li .water .water4 {
+  width: 301px;
+  height: 12px;
+  top: 75%;
+  left: 30%;
+  background: url("/images/water.png") -392px 0px no-repeat;
+}
+
+/* line 192 : F:\web_game\src\stylus\animation.styl */
 #content .person {
   width: 151px;
   height: 291px;
@@ -220,19 +328,24 @@ dd {
   background: url("/images/boy.png") 0 -291px no-repeat;
 }
 
-/* line 125 : F:\web_game\src\stylus\animation.styl */
+/* line 199 : F:\web_game\src\stylus\animation.styl */
+#content .person-reset {
+  background: url("/images/boy.png") -151px 0 no-repeat;
+}
+
+/* line 201 : F:\web_game\src\stylus\animation.styl */
 #content .cloud1Move {
   -webkit-animation: smallCloud 30s infinite;
   -moz-animation: smallCloud 30s infinite;
 }
 
-/* line 128 : F:\web_game\src\stylus\animation.styl */
+/* line 204 : F:\web_game\src\stylus\animation.styl */
 #content .cloud2Move {
   -webkit-animation: largeCloud 40s infinite;
   -moz-animation: largeCloud 40s infinite;
 }
 
-/* line 131 : F:\web_game\src\stylus\animation.styl */
+/* line 207 : F:\web_game\src\stylus\animation.styl */
 #content .walk {
   -webkit-animation-name: person-slow;
   -webkit-animation-duration: 950ms;
@@ -244,13 +357,13 @@ dd {
   -moz-animation-timing-function: steps(1, start);
 }
 
-/* line 140 : F:\web_game\src\stylus\animation.styl */
+/* line 216 : F:\web_game\src\stylus\animation.styl */
 #content .pause {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
 }
 
-/* line 143 : F:\web_game\src\stylus\animation.styl */
+/* line 219 : F:\web_game\src\stylus\animation.styl */
 #content .flower {
   -webkit-animation-name: person-flower;
   -webkit-animation-duration: 950ms;
@@ -262,7 +375,7 @@ dd {
   -moz-animation-timing-function: steps(1, start);
 }
 
-/* line 152 : F:\web_game\src\stylus\animation.styl */
+/* line 228 : F:\web_game\src\stylus\animation.styl */
 #content .fly {
   -webkit-animation-name: birdFly;
   -webkit-animation-duration: 400ms;

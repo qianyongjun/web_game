@@ -32,7 +32,20 @@
 				</div>
 				<div class="bird"></div>
 			</li>
-			<li>3</li>
+			<li>
+				<div class="c_background">
+					<div class="bg_top"></div>
+					<div class="bg_middle"></div>
+					<div class="bg_bottom"></div>
+				</div>
+				<div class="girl"></div>
+				<div class="water">
+					<div class="water1" id="water1"></div>
+					<div class="water2" id="water2"></div>
+					<div class="water3" id="water3"></div>
+					<div class="water4" id="water4"></div>
+				</div>
+			</li>
 		</ul>
 		<div id="boy" class="person pause"></div>
 	</div>
@@ -43,18 +56,13 @@
 	<script src="js/animation.js"></script>
 	<script>
 	$(function(){
-		var container = $('#content');
-		var swipe = Swipe(container);
-		//脪鲁脙忙鹿枚露炉
-		function scrollTo(time,proportion){
-			var disX = container.width()*proportion;
-			swipe.scrollTo(disX,time)
-		}
-
 		var boy = Animation();
+
+		girl.setOffset();
+
 		boy.walkTo(4000, 0.3)
 		            .then(function() {
-		                //碌脷脪禄麓脦脳脽脗路脥锚鲁脡
+		                //第一次移动完
 		                scrollTo(8000,1)
 			}).then(function(){
 				return boy.walkTo(8000,0.54);
@@ -76,6 +84,14 @@
 				closeDoor();
 			}).then(function(){
 				light.off();
+			}).then(function(){
+				scrollTo(8000,2);
+			}).then(function(){
+				return boy.walkTo(6000,0.4);
+			}).then(function(){
+				return boy.walkTo(2000,0.35,(girlPosY() - girl.getHeight()) / initHeight )
+			}).then(function(){
+				boy.Reset()
 			})
 	})
 	</script>
